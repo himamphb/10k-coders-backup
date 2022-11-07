@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array method</title>
+  </head>
+  <body>
+    <script>
+      const cars = ["Saab", "Volvo", "BMW"];
+
+      cars[0] = "ferrari";
+      document.write("<br>" + cars + "<br>");
+      
+      // Arrar methods in ES5
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      document.write("<br>" + fruits[0] + "<br>"); //accessing the first element of array
+
+      document.write("<br>" + cars.length + "<br>"); // Returns the number of elements
+
+      document.write("<br>" + cars + "<br>" + "<br>" + cars.sort() + "<br>"); // Sorts the array
+
+      for (i = 0; i < fruits.length; i++) {
+        //for loop for printing the array
+        document.write("<br>" + fruits[i] + "<br>");
+      }
+      document.write("<br>" + fruits);
+      //forEach loop
+      fruits.forEach(function (fruitsName, index, arr) {
+        document.write("<br>" + fruitsName + ":" + index + "<br>");
+      });
+
+      document.write(fruits.push("Lemon") + "<br>"); // Adds a new element (Lemon) to fruits
+      document.write("<br>" + fruits);
+
+      document.write(fruits.unshift("grapes") + "<br>"); // Adds a new element to start of an array
+      document.write("<br>" + fruits);
+
+      document.write(fruits.pop() + "<br>"); // the remove last element will display
+      document.write("<br>" + fruits);
+
+      document.write(fruits.shift() + "<br>"); // the remove first element will display
+
+      document.write("<br>" + fruits.join(" * ")); //it displays the array with * separation
+
+      document.write("<br>" + fruits.splice(2, 0, "Lemon", "Kiwi")); //it will add lemon,kiwi in 2 index in array and remove 0 element
+
+      //concatination of arrays
+      const arr1 = ["Cecilie", "Lone"];
+      const arr2 = ["Emil", "Tobias", "Linus"];
+      const arr3 = ["Robin", "Morgan"];
+      const myChildren = arr1.concat(arr2, arr3);
+      document.write("<br>"+myChildren+"<br>");
+    </script>
+
+    <script>
+        //pass by value 
+        function Myfunction(fname,lname){
+            this.fname=fname;
+            this.lname=lname;
+            this.age=22;
+        }
+        var myname = new Myfunction("himam","basha");
+        
+        myname.fname="Phbasha";
+        console.log(myname)
+        //pass by reference 
+        var person={
+            firstname:"pinjari",
+            lastname:"himbasha",
+        }
+        var person1=person
+        console.log(person)
+        console.log(person1)
+        person.firstname="PhimamB";
+    </script>
+  </body>
+</html>
