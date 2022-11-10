@@ -69,7 +69,7 @@
       document.write("total runs by all palyers" + ":" + totaldetails + "<br>");
       // total fours by all players
       var totaldetails = teamdetails.reduce((total_4s1, total_4s2) => {
-        if (total_4s1.fours) {
+        if (total_4s1.fours == 0) {
           return total_4s1.fours + total_4s2.fours;
         } else {
           return total_4s1 + total_4s2.fours;
@@ -80,7 +80,7 @@
       );
       //total sixes by all players
       var totaldetails = teamdetails.reduce((total_6s1, total_6s2) => {
-        if (total_6s1.sixes) {
+        if (total_6s1.sixes == 0) {
           return total_6s1.sixes + total_6s2.sixes;
         } else {
           return total_6s1 + total_6s2.sixes;
@@ -100,26 +100,57 @@
       document.write(
         "total balls played by all palyers" + ":" + totaldetails + "<br>"
       );
-      //total strikrate of all players
-      var totaldetails = teamdetails.reduce(
-        (total_strikerate1, total_strikerate2) => {
-          if (total_strikerate1.strikerate) {
-            return total_strikerate1.strikerate + total_strikerate2.strikerate;
-          } else {
-            return total_strikerate1 + total_strikerate2.strikerate;
-          }
-        }
-      );
-      document.write(
-        "total strikrate by all palyers" + ":" + totaldetails + "<br>"
-      );
       //lowest runs
-      var lowestruns=teamdetails.filter((lowruns)=>{
-        return lowruns.Runs < 4;
-        
-      })
+      var lowestruns=teamdetails.sort(function (a, b) {
+        if (a.Runs > b.Runs) {
+          return 1;
+        }
+        if (a.Runs < b.Runs) {
+          return -1;
+        }
+        if (a.Runs == b.Runs) {
+          return 0;
+        }
+      });
       console.log(lowestruns)
-      
+
+      teamdetails.sort(function (a, b) {
+        if (a.Runs < b.Runs) {
+          return 1;
+        }
+        if (a.Runs > b.Runs) {
+          return -1;
+        }
+        if (a.Runs == b.Runs) {
+          return 0;
+        }
+      });
+      console.log(teamdetails)
+
+      //total strikrate of all players
+      // var totaldetails = teamdetails.reduce(
+      //   (total_strikerate1, total_strikerate2) => {
+      //     if (total_strikerate1.strikerate) {
+      //       return total_strikerate1.strikerate + total_strikerate2.strikerate;
+      //     } else {
+      //       return total_strikerate1 + total_strikerate2.strikerate;
+      //     }
+      //   }
+      // );
+
+      //   "total strikrate by all palyers" + ":" + totaldetails + "<br>"
+      // );
+      //lowest runs
+      // var lowestruns=teamdetails.filter((lowruns)=>{
+      //   return lowruns.Runs < 4;
+
+      // })
+      // console.log(lowestruns)
+      // var highesttruns=teamdetails.filter((highruns)=>{
+      //   return highruns.Runs > 50;
+
+      // })
+      // console.log(highestruns)
     </script>
   </body>
 </html>
