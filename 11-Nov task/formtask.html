@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form format</title>
+    <style>
+      .textborder {
+        padding: 3px;
+      }
+      #nameid2 {
+        margin-left: 40px;
+      }
+      #topspacing {
+        margin-top: 40px;
+        
+      }
+      .messagetop{
+        display:flex;
+        justify-content: center;
+        
+      }
+      .msg{
+        display:flex;
+      }
+      #message{
+        margin-left:45px ;
+      }
+      .subbut{
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="messagetop">
+    <form action="" id="topspacing">
+      <label for="nameid"> Name </label>
+      <input type="text" class="textdorder" name="name" id="nameid1" placeholder="First Name" />
+      <br /><br />
+      <input type="text" class="textdorder" name="lname" id="nameid2" placeholder="Last Name"/>
+      <br /><br />
+      <label for="emailid"> E-mail </label>
+      <input type="email" class="textdorder" name="email" id="emailid" />
+      <br /><br />
+      <label class="msg" for="message" > Message </label>
+      <textarea  name="message" id="message" cols="22" rows="5"></textarea>
+      <br><br>
+    </form>
+    </div>
+    <div class="subbut">
+    <button >submit</button>
+    </div>
+  </body>
+</html>

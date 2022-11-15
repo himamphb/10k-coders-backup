@@ -8,20 +8,30 @@
   </head>
   <body>
     <script>
-      const points = [40, 100, 1, 5, 25, 10];
+      var rnunb = Math.random() * 1000000;
+      console.log("random no:", rnunb);
+      console.log("lowest no:", Math.floor(rnunb));
+      console.log("highest no:", Math.ceil(rnunb));
+      console.log("round no:", Math.round(rnunb));
+      console.log("x value:", Math.trunc(rnunb));
+      console.log("returns x condition value :", Math.sign(rnunb));
+
+      //finding max and min element in array using "math" method
+
+      var arrandom = Math.random()*10000;
       
-      points.sort(function(a, b){
-      if(a>b){
-      return 1;
+      // console.log("randomarray:",randonarray)
+      // for(i=0;i<10;i++){
+      //   var randonarray = Math.round(Math.random()*10000);
+      //   arrandom.push(randonarray);
+      // }
+      //   console.log(arrandom);
+      
+      while(arrandom<10){
+        
       }
-      if(a<b){
-      return -1;
-      }
-      if(a==b){
-      return 0;
-      }
-    });
-       console.log(points);
+      
+       
     </script>
   </body>
 </html>
