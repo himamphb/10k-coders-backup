@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getting_values</title>
+    <style>
+      .formatcontent {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <form class="formatcontent">
+        <label for="university">University:</label>
+        <input type="text" name="university" id="university" /><br /><br />
+        <label for="institute" id="institute">Institute:</label>
+        <input type="text" name="institute" id="institute" /><br /><br />
+        <label for="degree">Degree:</label>
+        <select name="degree" id="degree">
+          <option value="select">select....</option>
+          <option value="B.E">B.E</option>
+          <option value="B.Com">B.Com</option>
+          <option value="Diploma">Diploma</option>
+        </select>
+        <br /><br />
+        <label for="branch">Branch:</label>
+        <select name="branch" id="branch">
+          <option value="select">select....</option>
+          <option value="ECE">ECE</option>
+          <option value="CSE">CSE</option>
+          <option value="MECH">MECH</option>
+          <option value="CIVIL">CIVIL</option>
+        </select>
+        <br /><br />
+        <input type="radio" name="pursuing" id="pursuing" />
+        <label for="pursuing">Pursuing</label>
+        <input type="radio" name="completed" id="completed" />
+        <label for="completed">Completed</label><br /><br />
+        <label for="average">Average CPI:</label>
+        <input type="number" name="average" id="average" /><span>Upto</span>
+        <input type="number" name="semester" id="semester" />
+        <label for="semester">Semester</label><br /><br />
+        <label for="experience">Experienc:</label>
+        <input type="number" name="experience" id="experience" />
+        <br /><br />
+        <label for="website">Your website or Blog:</label>
+        <input
+          type="url"
+          name="website"
+          id="website"
+          placeholder="http://www....com"
+        />
+        <br /><br />
+        <button onclick="getvalue()" type="button">Get Data</button>
+      </form>
+    
+    <script src="../19-nov task/crud app/create.js">
+      function getvalue(){
+        var displayUsers;
+        displayUsers = {
+          university: document.getElementById("university").value,
+        };
+      }
+      console.log("Displaying the data from the user input:", displayUsers);
+    </script>
+  </body>
+</html>

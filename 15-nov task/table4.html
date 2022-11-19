@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border:2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>tel</th>
+                <th>adress</th>
+                <th>city</th>
+                <th>state</th>
+                <th>zip</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+     var data=[
+     {
+         "fname": "Elida",
+         "lname": "Foster",
+         "tel": "(516)191-9862",
+         "address": "3126 Consectetur Ave",
+         "city": "Christiana",
+         "state": "IL",
+         "zip": 35540
+     },
+     {
+         "fname": "Artina",
+         "lname": "Etheridge",
+         "tel": "(876)173-1968",
+         "address": "1408 Libero St",
+         "city": "Cullman",
+         "state": "MT",
+         "zip": 26082
+     },
+     {
+         "fname": "Yauma",
+         "lname": "Schoenbauer",
+         "tel": "(166)813-9476",
+         "address": "2573 Placerat Ave",
+         "city": "Lancaster",
+         "state": "CT",
+         "zip": 23775
+     },
+     {
+         "fname": "Danella",
+         "lname": "Trenkelbach",
+         "tel": "(765)951-5545",
+         "address": "2171 Lectus Ave",
+         "city": "Zionsville",
+         "state": "AZ",
+         "zip": 15472
+     },
+     {
+         "fname": "Kurt",
+         "lname": "Moffett",
+         "tel": "(444)802-2900",
+         "address": "3982 Vel Ave",
+         "city": "Charlotte",
+         "state": "OR",
+         "zip": 42460
+     },
+     {
+         "fname": "Rita",
+         "lname": "Barden",
+         "tel": "(919)516-0430",
+         "address": "4079 Hendrerit Ct",
+         "city": "North Providence",
+         "state": "MI",
+         "zip": 91944
+     },
+     {
+         "fname": "Clare",
+         "lname": "Gladue",
+         "tel": "(143)012-0414",
+         "address": "4084 In Ct",
+         "city": "Raymond",
+         "state": "AZ",
+         "zip": 52330
+     },
+     {
+         "fname": "Nicolas",
+         "lname": "Terry",
+         "tel": "(217)126-7529",
+         "address": "568 Molestie Dr",
+         "city": "Chesterfield",
+         "state": "WA",
+         "zip": 43289
+     },
+     {
+         "fname": "Huijun",
+         "lname": "Yen",
+         "tel": "(727)493-5919",
+         "address": "4884 Sit Ln",
+         "city": "Clearwater",
+         "state": "IN",
+         "zip": 60228
+     },
+     {
+         "fname": "Irene",
+         "lname": "Schuhmann",
+         "tel": "(710)866-4640",
+         "address": "2069 Adipiscing Dr",
+         "city": "Wilder",
+         "state": "TN",
+         "zip": 51545
+     }
+ ];
+
+           data.forEach((user)=>{
+            var tr = document.createElement('tr')
+            for(i in user){
+                var td=document.createElement('td')
+                td.innerHTML=user[i]
+                tr.appendChild(td)
+            }
+            document.querySelector("tbody").appendChild(tr)
+           });
+    </script>
+</body>
+</html>

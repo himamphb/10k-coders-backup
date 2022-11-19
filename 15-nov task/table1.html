@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table1</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>User Name</th>
+          <th>Password</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var users = [
+        {
+          id: 1373,
+          email: "FRogers@dolor.org",
+          username: "FHill",
+          password: "2stDD",
+        },
+        {
+          id: 1374,
+          email: "RPitzel@vestibulum.io",
+          username: "LRider",
+          password: "WBOmc",
+        },
+        {
+          id: 1375,
+          email: "KDenton@donec.org",
+          username: "GKavanaugh",
+          password: "PQijD",
+        },
+        {
+          id: 1376,
+          email: "DBriley@aliquam.net",
+          username: "JBartlett",
+          password: "sjEka",
+        },
+        {
+          id: 1377,
+          email: "DNeese@libero.ly",
+          username: "MCreel",
+          password: "t4Llc",
+        },
+      ];
+      
+      var fillteredUsers = [];
+      function displayUsers(users,i){
+        document.querySelector("tbody").innerHTML = "";
+        users.forEach((user,i) => {
+        var myTr = document.createElement("tr");
+
+        for (a in user) {
+          var myTd = document.createElement("td");
+          myTd.innerHTML = user[a];
+          myTr.appendChild(myTd);
+        }
+
+
+        var deleteTd = document.createElement("td");
+        var deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+        deleteBtn.innerHTML = "DELETE";
+        deleteTd.appendChild(deleteBtn);
+        myTr.appendChild(deleteTd);
+
+        document.querySelector("tbody").appendChild(myTr);
+      });
+      }
+      function deleteUser(i) {
+        if (fillteredUsers.length == 0) {
+          fillteredUsers = users.filter((user, index) => {
+            return user.id !== users[i].id;
+          });
+        } else {
+          fillteredUsers = fillteredUsers.filter((user, index) => {
+            return user.id !== fillteredUsers[i].id;
+          });
+        }
+
+        displayUsers(fillteredUsers);
+      }
+
+      displayUsers(users);
+      
+    </script>
+  </body>
+</html>
+
+
+
+<!-- // Object.values(user).forEach((val) => {
+  //   console.log(val);
+  //   var myTd = document.createElement("td");
+  //   myTd.innerHTML = val;
+  //   myTr.appendChild(myTd);
+  // });
+
+  // var td1 = document.createElement("td");
+  // td1.innerHTML = user.id
+  // myTr.appendChild(td1)
+
+  // var td2 = document.createElement("td");
+  // td2.innerHTML = user.email
+  // myTr.appendChild(td2)
+
+  // var td3 = document.createElement("td");
+  // td3.innerHTML = user.username
+  // myTr.appendChild(td3)
+
+  // var td4 = document.createElement("td");
+  // td4.innerHTML = user.password
+  // myTr.appendChild(td4) -->
