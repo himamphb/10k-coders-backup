@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>table6</title>
+    <title>Document</title>
 
     <style>
-      table {
-        border-collapse: collapse;
-      }
+        table{
+            border-collapse: collapse;
+        }
     </style>
   </head>
 
@@ -212,7 +212,7 @@
       data.forEach((user) => {
         var mytr = document.createElement("tr");
         for (i in user) {
-          var mytd = document.createElement("td");
+          var mytd = document.createElement("th");
           if (i !== "address" && i !== "name") {
             mytd.innerHTML = user[i];
             mytr.appendChild(mytd);
@@ -224,7 +224,7 @@
               if (j !== "geolocation") {
                 addtd.innerHTML = obj[j];
                 mytr.appendChild(addtd);
-              } else if (j == "geolocation") {
+              }else if (j == "geolocation") {
                 for (a in obj[j]) {
                   var geotd = document.createElement("td");
                   geotd.innerHTML = obj[j][a];

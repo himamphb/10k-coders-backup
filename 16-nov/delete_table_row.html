@@ -42,6 +42,7 @@
           var myTr = document.createElement("tr");
           for (a in user) {
             if (a == "address") {
+              // Handling Address Object
               var addressObj = user[a];
 
               for (b in addressObj) {
@@ -71,30 +72,30 @@
             }
           }
 
-    //       var editTd = document.createElement("td");
-    //       var editBtn = document.createElement("button");
-    //       editBtn.innerHTML = "EDIT";
-    //       editTd.appendChild(editBtn);
-    //       myTr.appendChild(editTd);
+          var editTd = document.createElement("td");
+          var editBtn = document.createElement("button");
+          editBtn.innerHTML = "EDIT";
+          editTd.appendChild(editBtn);
+          myTr.appendChild(editTd);
 
-    //       var deleteTd = document.createElement("td");
-    //       var deleteBtn = document.createElement("button");
-    //       deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
-    //       deleteBtn.innerHTML = "DELETE";
-    //       deleteTd.appendChild(deleteBtn);
-    //       myTr.appendChild(deleteTd);
+          var deleteTd = document.createElement("td");
+          var deleteBtn = document.createElement("button");
+          deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+          deleteBtn.innerHTML = "DELETE";
+          deleteTd.appendChild(deleteBtn);
+          myTr.appendChild(deleteTd);
 
-    //       document.querySelector("tbody").appendChild(myTr);
-    //     });
-    //   }
+          document.querySelector("tbody").appendChild(myTr);
+        });
+      }
       function deleteUser(i) {
         if (fillteredUsers.length == 0) {
           fillteredUsers = users.filter((user, index) => {
-            return user.email !== users[i].email;
+            return user.id !== users[i].id;
           });
         } else {
           fillteredUsers = fillteredUsers.filter((user, index) => {
-            return user.email !== fillteredUsers[i].email;
+            return user.id !== fillteredUsers[i].id;
           });
         }
 

@@ -14,7 +14,6 @@
           <th>Email</th>
           <th>User Name</th>
           <th>Password</th>
-          <th>DELETE</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -52,71 +51,43 @@
           password: "t4Llc",
         },
       ];
-      
-      var fillteredUsers = [];
-      function displayUsers(users,i){
-        document.querySelector("tbody").innerHTML = "";
-        users.forEach((user,i) => {
+
+      users.forEach((user) => {
         var myTr = document.createElement("tr");
 
-        for (a in user) {
-          var myTd = document.createElement("td");
-          myTd.innerHTML = user[a];
-          myTr.appendChild(myTd);
+        // By Using for in Loop
+
+        for(a in user){
+        var myTd = document.createElement("td")
+        myTd.innerHTML=user[a];
+        myTr.appendChild(myTd)
         }
 
+        // Object.values(user).forEach((val) => {
+        //   console.log(val);
+        //   var myTd = document.createElement("td");
+        //   myTd.innerHTML = val;
+        //   myTr.appendChild(myTd);
+        // });
 
-        var deleteTd = document.createElement("td");
-        var deleteBtn = document.createElement("button");
-        deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
-        deleteBtn.innerHTML = "DELETE";
-        deleteTd.appendChild(deleteBtn);
-        myTr.appendChild(deleteTd);
+        // var td1 = document.createElement("td");
+        // td1.innerHTML = user.id
+        // myTr.appendChild(td1)
+
+        // var td2 = document.createElement("td");
+        // td2.innerHTML = user.email
+        // myTr.appendChild(td2)
+
+        // var td3 = document.createElement("td");
+        // td3.innerHTML = user.username
+        // myTr.appendChild(td3)
+
+        // var td4 = document.createElement("td");
+        // td4.innerHTML = user.password
+        // myTr.appendChild(td4)
 
         document.querySelector("tbody").appendChild(myTr);
       });
-      }
-      function deleteUser(i) {
-        if (fillteredUsers.length == 0) {
-          fillteredUsers = users.filter((user, index) => {
-            return user.id !== users[i].id;
-          });
-        } else {
-          fillteredUsers = fillteredUsers.filter((user, index) => {
-            return user.id !== fillteredUsers[i].id;
-          });
-        }
-
-        displayUsers(fillteredUsers);
-      }
-
-      displayUsers(users);
-      
     </script>
   </body>
 </html>
-
-
-
-<!-- // Object.values(user).forEach((val) => {
-  //   console.log(val);
-  //   var myTd = document.createElement("td");
-  //   myTd.innerHTML = val;
-  //   myTr.appendChild(myTd);
-  // });
-
-  // var td1 = document.createElement("td");
-  // td1.innerHTML = user.id
-  // myTr.appendChild(td1)
-
-  // var td2 = document.createElement("td");
-  // td2.innerHTML = user.email
-  // myTr.appendChild(td2)
-
-  // var td3 = document.createElement("td");
-  // td3.innerHTML = user.username
-  // myTr.appendChild(td3)
-
-  // var td4 = document.createElement("td");
-  // td4.innerHTML = user.password
-  // myTr.appendChild(td4) -->
