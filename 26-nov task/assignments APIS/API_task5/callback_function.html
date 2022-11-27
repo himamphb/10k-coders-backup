@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback_api</title>
+  </head>
+  <body>
+    <button onclick="getData()">Get Data</button>
+    <!-- <ul></ul> -->
+    <script>
+      var data = [];
+      function getData() {
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            data = JSON.parse(getInfo.response);
+            console.log("the resulted data from the rapidapi is:", data);
+            // displayAllseriesNames()
+          }
+        };
+        getInfo.open("POST", "https://roco-api.p.rapidapi.com/perks/id");
+        getInfo.setRequestHeader(
+          "X-RapidAPI-Key",
+          "c3f5e33920mshb287b2f780d9863p1f4237jsnbf19ef4ef305"
+        );
+        getInfo.setRequestHeader("X-RapidAPI-Host", "roco-api.p.rapidapi.com");
+        getInfo.send();
+      }
+
+      // function displayAllseriesNames(){
+      //     data.seriesMatches.forEach((series)=>{
+
+      //         if(series.seriesAdWrapper){
+      //             console.log(series)
+      //             var myLi = document.createElement("li")
+      //             myLi.innerHTML = series.seriesAdWrapper.seriesName
+      //             document.querySelector("ul").appendChild(myLi)
+      //         }
+      //     })
+      // }
+    </script>
+  </body>
+</html>
