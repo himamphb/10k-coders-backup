@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deleting_images_DOM_method</title>
+    <style>
+        img {
+        width: 250px;
+        height: 170px;
+        
+        
+      }
+      li{
+        list-style: none;
+        display: inline-block;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> <img src="1.jpeg" alt=""> </li>
+        <li> <img src="2.jpeg" alt=""> </li>
+        <li> <img src="3.jpeg" alt=""> </li>
+        <li> <img src="4.jpeg" alt=""> </li>
+        <li> <img src="5.jpeg" alt=""> </li>
+    </ul>
+    <script>
+        document.querySelector("ul").onclick=function(event){
+            var selectedElemented = event.target.parentNode;
+            var parentElement = selectedElemented.parentNode
+            parentElement.removeChild(selectedElemented)
+            // console.log(selectedElemented);
+            
+        }
+    </script>
+</body>
+</html>

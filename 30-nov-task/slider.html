@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slider_practise</title>
+    <style>
+      img {
+        width: 350px;
+        height: 270px;
+        cursor: pointer;
+      }
+      div {
+        text-align: center;
+        margin-top: 100px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="1.jpeg" alt="" onmouseover="stopSlide()" onmouseout="startSlide()"/>
+      <p>i am excuting</p>
+    </div>
+    <script>
+    
+      function changeimages() {
+        var imgAddress = document.querySelector("img").src;
+        var imgNumber = imgAddress.substr(imgAddress.lastIndexOf("/") + 1, 1);
+        imgNumber++;
+        if (imgNumber == 6) {
+            imgNumber = 1;
+            }
+        document.querySelector("img").setAttribute("src",imgNumber + ".jpeg");
+      }
+      
+      var sliding;
+      function startSlide() {
+        sliding = setInterval(() => {
+          changeimages();
+        }, 1000);
+        document.querySelector("p").style.display = "none";
+    }
+    
+    function stopSlide(){
+        clearInterval(sliding)
+        document.querySelector("p").style.display="block"
+        
+    }
+    document.querySelector("img").onmouseover = function () {
+          stopSlide();
+        };
+
+        document.querySelector("img").onmouseout = function () {
+          startSlide();
+        };
+        startSlide()
+    </script>
+  </body>
+</html>
