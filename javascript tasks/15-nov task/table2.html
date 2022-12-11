@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table2</title>
+    <style>
+        table,th,td {
+            width: 50%;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+       
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <table >
+            <thead>
+                <th>fname</th>
+                <th>lname</th>
+            </thead>
+
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="trail">
+
+    </div>
+    <script>
+        var userName = [
+            {
+                "fname": "Antoinette",
+                "lname": "Higdon"
+            },
+            {
+                "fname": "Annie",
+                "lname": "Velasco"
+            },
+            {
+                "fname": "Kantanzia",
+                "lname": "Obermann"
+            },
+            {
+                "fname": "Latonia",
+                "lname": "Woods"
+            },
+            {
+                "fname": "Steve",
+                "lname": "Reiter"
+            },
+            {
+                "fname": "Jolene",
+                "lname": "Ray"
+            },
+            {
+                "fname": "Ahmad",
+                "lname": "Kim"
+            },
+            {
+                "fname": "Koweta",
+                "lname": "Tupper"
+            },
+            {
+                "fname": "Anteria",
+                "lname": "Lynn"
+            },
+            {
+                "fname": "Girish",
+                "lname": "Strong"
+            }
+        ];
+
+        userName.forEach((user) => {
+            var rows = document.createElement("tr")
+            for (i in user) {
+                var cols = document.createElement("td")
+                cols.innerHTML = user[i]
+                rows.appendChild(cols)
+            }
+            document.querySelector("tbody").appendChild(rows)
+        });
+    </script>
+</body>
+
+</html>

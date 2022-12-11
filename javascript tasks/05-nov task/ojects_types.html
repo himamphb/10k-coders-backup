@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //literal method
+      var person = {
+        name: "himam basha",
+        mail: "himamphb124@gmail.com",
+        mobile: 9951941987,
+        city: "kurnool",
+      };
+
+      person.name = "pinjari hb";
+      person["city"] = "hyderabad";
+      person.mobile = 9951941997;
+      document.write("city : " + person.city + "<br> name : " + person.name);
+      console.log(person);
+      //builtin method
+      var name1 = new Object({
+        fname: "himam",
+        lname: "basha",
+        designation: "student",
+      });
+      console.log(name1);
+      //costructor method
+      function emp1(id, name, salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+      }
+      var emp2 = new emp1(200, "kumar", 100000);
+      var emp3 = new emp1(300, "kumari", 10000);
+      console.log(emp2);
+      console.log(emp3);
+      //class constructor
+      class emp4 {
+        constructor(ftname, ltname) {
+          this.fname = ftname;
+          this.ltname = ltname;
+        }
+      }
+      var emp5 = new emp4("john", "wicky");
+      console.log(emp5);
+    </script>
+    <script>
+      // Constructor function for Person objects
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+        this.name = function () {
+          return this.firstName + " " + this.lastName;
+        };
+      }
+      const myFather = new Person("John", "Doe", 50, "blue");
+      console.log(myFather.name());
+
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age() {
+          let date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+
+      let myCar = new Car("Ford", 2014);
+       console.log(myCar.age());
+    </script>
+  </body>
+</html>

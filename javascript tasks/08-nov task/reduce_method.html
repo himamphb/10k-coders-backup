@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var teamdetails = [
+        {
+          name: "kl rahul",
+          Runs: 4,
+          Balls: 8,
+          fours: 0,
+          sixes: 0,
+          strikerate: 50.0,
+        },
+        {
+          name: "rohit sharma",
+          Runs: 4,
+          Balls: 7,
+          fours: 0,
+          sixes: 0,
+          strikerate: 57.14,
+        },
+        {
+          name: "kohli",
+          Runs: 82,
+          Balls: 53,
+          fours: 6,
+          sixes: 4,
+          strikerate: 154.72,
+        },
+        {
+          name: "yadav",
+          Runs: 15,
+          Balls: 10,
+          fours: 2,
+          sixes: 0,
+          strikerate: 150.0,
+        },
+        {
+          name: "patel",
+          Runs: 40,
+          Balls: 37,
+          fours: 0,
+          sixes: 0,
+          strikerate: 66.67,
+        },
+        {
+          name: "karthik",
+          Runs: 1,
+          Balls: 2,
+          fours: 0,
+          sixes: 0,
+          strikerate: 0,
+        },
+      ];
+      // total runs by all players
+      var totaldetails = teamdetails.reduce((total_runs1, total_runs2) => {
+        if (total_runs1.Runs) {
+          return total_runs1.Runs + total_runs2.Runs;
+        } else {
+          return total_runs1 + total_runs2.Runs;
+        }
+      });
+      document.write("total runs by all palyers" + ":" + totaldetails + "<br>");
+      // total fours by all players
+      var totaldetails = teamdetails.reduce((total_4s1, total_4s2) => {
+        if (total_4s1.fours == 0) {
+          return total_4s1.fours + total_4s2.fours;
+        } else {
+          return total_4s1 + total_4s2.fours;
+        }
+      });
+      document.write(
+        "total fours by all palyers" + ":" + totaldetails + "<br>"
+      );
+      //total sixes by all players
+      var totaldetails = teamdetails.reduce((total_6s1, total_6s2) => {
+        if (total_6s1.sixes == 0) {
+          return total_6s1.sixes + total_6s2.sixes;
+        } else {
+          return total_6s1 + total_6s2.sixes;
+        }
+      });
+      document.write(
+        "total sixes by all palyers" + ":" + totaldetails + "<br>"
+      );
+      //total balls played by all players
+      var totaldetails = teamdetails.reduce((total_balls1, total_balls2) => {
+        if (total_balls1.Balls) {
+          return total_balls1.Balls + total_balls2.Balls;
+        } else {
+          return total_balls1 + total_balls2.Balls;
+        }
+      });
+      document.write(
+        "total balls played by all palyers" + ":" + totaldetails + "<br>"
+      );
+      //lowest runs
+      var lowestruns=teamdetails.sort(function (a, b) {
+        if (a.Runs > b.Runs) {
+          return 1;
+        }
+        if (a.Runs < b.Runs) {
+          return -1;
+        }
+        if (a.Runs == b.Runs) {
+          return 0;
+        }
+      });
+      console.log(lowestruns)
+
+      teamdetails.sort(function (a, b) {
+        if (a.Runs < b.Runs) {
+          return 1;
+        }
+        if (a.Runs > b.Runs) {
+          return -1;
+        }
+        if (a.Runs == b.Runs) {
+          return 0;
+        }
+      });
+      console.log(teamdetails)
+
+      //total strikrate of all players
+      // var totaldetails = teamdetails.reduce(
+      //   (total_strikerate1, total_strikerate2) => {
+      //     if (total_strikerate1.strikerate) {
+      //       return total_strikerate1.strikerate + total_strikerate2.strikerate;
+      //     } else {
+      //       return total_strikerate1 + total_strikerate2.strikerate;
+      //     }
+      //   }
+      // );
+
+      //   "total strikrate by all palyers" + ":" + totaldetails + "<br>"
+      // );
+      //lowest runs
+      // var lowestruns=teamdetails.filter((lowruns)=>{
+      //   return lowruns.Runs < 4;
+
+      // })
+      // console.log(lowestruns)
+      // var highesttruns=teamdetails.filter((highruns)=>{
+      //   return highruns.Runs > 50;
+
+      // })
+      // console.log(highestruns)
+    </script>
+  </body>
+</html>

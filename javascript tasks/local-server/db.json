@@ -1,0 +1,325 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "url": "https://www.nike.com/",
+      "title": "Nike. Just Do It. Nike.com",
+      "description": "Nike delivers innovative products, experiences and services to inspire athletes."
+    },
+    {
+      "id": 2,
+      "url": "https://twitter.com/nike",
+      "title": "Nike - Twitter",
+      "description": "Founded by Nike HBCU alumni in 2020, the initiative has served as an opportunity for teams at Nike to partner with HBCU trailblazers and community creatives to ..."
+    },
+    {
+      "id": 3,
+      "url": "https://www.instagram.com/nike/?hl=en",
+      "title": "Nike (@nike) • Instagram photos and videos",
+      "description": "252m Followers, 147 Following, 1012 Posts - See Instagram photos and videos from Nike (@nike) ... Follow. Nike. Spotlighting athlete* and stories"
+    },
+    {
+      "id": 4,
+      "url": "https://en.wikipedia.org/wiki/Nike,_Inc.",
+      "title": "Nike, Inc. - Wikipedia",
+      "description": "Nike, Inc is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, ..."
+    },
+    {
+      "id": 5,
+      "url": "https://www.youtube.com/user/nike",
+      "title": "Nike - YouTube",
+      "description": "http://youtube.com/nike Nike strives to bring innovation and inspiration to every athlete* in the world. · https://go.nike.com/Nike-App Download SNKRS App · https ..."
+    },
+    {
+      "id": 6,
+      "url": "https://www.facebook.com/nike/",
+      "title": "Nike - Home | Facebook",
+      "description": "Nike, Beaverton, OR. 36064730 likes · 363279 talking about this · 7052 were here. Just Do It."
+    },
+    {
+      "id": 7,
+      "url": "https://play.google.com/store/apps/details?id=com.nike.omega&hl=en_US&gl=US",
+      "title": "Nike: Shoes, Apparel & Stories - Apps on Google Play",
+      "description": "Shop all perfect gifts for sport and style this Nike holiday season. Nike Member Exclusive products, end of year deals, and more - shop and save as a Nike ..."
+    },
+    {
+      "id": 8,
+      "url": "https://www.nikesb.com/",
+      "title": "Nike Skateboarding",
+      "description": "The official website of Nike Skateboarding."
+    },
+    {
+      "id": 9,
+      "url": "https://www.footlocker.com/category/brands/nike.html",
+      "title": "Nike Sneakers, Apparel, and Accessories - Foot Locker",
+      "description": "Shop the latest selection of Nike at Foot Locker. Find the hottest sneaker drops from brands like Jordan, Nike, Under Armour, ..."
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "himam phb",
+      "username": "basha",
+      "email": "himamphb123",
+      "phone": "123456",
+      "website": "www.himam.com"
+    },
+    {
+      "id": "2",
+      "name": "murari",
+      "username": "maheshha",
+      "email": "mahesh123",
+      "phone": "1999000",
+      "website": "www.mahesh.com"
+    },
+    {
+      "id": "3",
+      "name": "chitran",
+      "username": "kuma",
+      "email": "kumar123",
+      "phone": "9999999",
+      "website": "www.kumar.com"
+    },
+    {
+      "id": "4",
+      "name": "raam vardah",
+      "username": "dinesh",
+      "email": "dineshkumar123",
+      "phone": "7777888",
+      "website": "www.dieshkumar.com"
+    },
+    {
+      "id": "5",
+      "name": "mitran phb",
+      "username": "vignesh",
+      "email": "vignesh7788",
+      "phone": "56723",
+      "website": "www.mitran.com"
+    }
+  ],
+  "continents": [
+    {
+      "id": 1,
+      "value": "Africa",
+      "key": "AF"
+    },
+    {
+      "id": 2,
+      "value": "North America",
+      "key": "NA"
+    },
+    {
+      "id": 3,
+      "value": "Oceania",
+      "key": "OC"
+    },
+    {
+      "id": 4,
+      "value": "Antarctica",
+      "key": "AN"
+    },
+    {
+      "id": 5,
+      "value": "Asia",
+      "key": "AS"
+    },
+    {
+      "id": 6,
+      "value": "Europe",
+      "key": "EU"
+    }
+  ],
+  "userdetails": [
+    {
+      "id": 1,
+      "fname": "Minsoo",
+      "lname": "Marrinson",
+      "tel": "(262)379-8718",
+      "address": "3321 Sed Rd",
+      "city": "Norfolk",
+      "state": "SC",
+      "zip": 35249
+    },
+    {
+      "id": 2,
+      "fname": "Theodore",
+      "lname": "Miyaki",
+      "tel": "(278)359-8696",
+      "address": "2865 Sed St",
+      "city": "Orange",
+      "state": "LA",
+      "zip": 27409
+    },
+    {
+      "id": 3,
+      "fname": "Imelda",
+      "lname": "Paullin",
+      "tel": "(507)023-2480",
+      "address": "5060 Scelerisque Ln",
+      "city": "Carrollton",
+      "state": "CT",
+      "zip": "000000"
+    },
+    {
+      "id": 4,
+      "fname": "Courtney",
+      "lname": "Murphy",
+      "tel": "(775)150-3463",
+      "address": "5628 Suspendisse Dr",
+      "city": "Birmingham",
+      "state": "CO",
+      "zip": 99639
+    },
+    {
+      "id": 5,
+      "fname": "Joaquin",
+      "lname": "Steuernagel",
+      "tel": "(853)545-7014",
+      "address": "4546 Porttitor Ln",
+      "city": "Sun Prairie",
+      "state": "MT",
+      "zip": "699999"
+    },
+    {
+      "id": 6,
+      "fname": "Tariq",
+      "lname": "Habib",
+      "tel": "(690)717-9189",
+      "address": "4217 Sed Ln",
+      "city": "Church Point",
+      "state": "CT",
+      "zip": 15853
+    },
+    {
+      "id": 7,
+      "fname": "Thursday",
+      "lname": "Carter",
+      "tel": "(536)038-8544",
+      "address": "5188 Sed St",
+      "city": "Laredo",
+      "state": "AK",
+      "zip": 77434
+    },
+    {
+      "id": 8,
+      "fname": "Sangita",
+      "lname": "Willey",
+      "tel": "(545)080-5376",
+      "address": "8887 Sed Ave",
+      "city": "Central Lake",
+      "state": "TN",
+      "zip": "77489"
+    },
+    {
+      "id": 9,
+      "fname": "Pinjari",
+      "lname": "Basha",
+      "tel": "(853)545-7014",
+      "address": "82-7, shareen nagar",
+      "city": "bangalore",
+      "state": "Karnataka",
+      "zip": "518008"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1,
+      "albumId": "1",
+      "title": "accuses beatae ad facilis cum similique qui sunt",
+      "url": "https://via.placeholder.com/600/92c952",
+      "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+    },
+    {
+      "id": 2,
+      "albumId": "1",
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://via.placeholderhimam.com/600/771796",
+      "thumbnailUrl": "https://via.placeholder.com/150/771796"
+    },
+    {
+      "albumId": 1,
+      "id": 3,
+      "title": "officia porro iure quia iusto qui ipsa ut modi",
+      "url": "https://via.placeholder.com/600/24f355",
+      "thumbnailUrl": "https://via.placeholder.com/150/24f355"
+    },
+    {
+      "albumId": 1,
+      "id": 4,
+      "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+      "url": "https://via.placeholder.com/600/d32776",
+      "thumbnailUrl": "https://via.placeholder.com/150/d32776"
+    },
+    {
+      "albumId": 1,
+      "id": 5,
+      "title": "natus nisi omnis corporis facere molestiae rerum in",
+      "url": "https://via.placeholder.com/600/f66b97",
+      "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
+    },
+    {
+      "albumId": 1,
+      "id": 6,
+      "title": "accusamus ea aliquid et amet sequi nemo",
+      "url": "https://via.placeholder.com/600/56a8c2",
+      "thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
+    },
+    {
+      "albumId": 1,
+      "id": 7,
+      "title": "officia delectus consequatur vero aut veniam explicabo molestias",
+      "url": "https://via.placeholder.com/600/b0f7cc",
+      "thumbnailUrl": "https://via.placeholder.com/150/b0f7cc"
+    },
+    {
+      "albumId": 1,
+      "id": 8,
+      "title": "aut porro officiis laborum odit ea laudantium corporis",
+      "url": "https://via.placeholder.com/600/54176f",
+      "thumbnailUrl": "https://via.placeholder.com/150/54176f"
+    }
+  ],
+  "response": [
+    {
+      "id": 1,
+      "name": "Atlanta Hawks",
+      "nationnal": "false",
+      "logo": "null",
+      "flag": "https://media.api-football.com/flags/us.svg"
+    },
+    {
+      "id": 2,
+      "name": "Boston Celtics",
+      "nationnal": "false",
+      "logo": "null",
+      "flag": "https://media.api-football.com/flags/us.svg"
+    },
+    {
+      "id": 3,
+      "name": "Brooklyn Nets",
+      "nationnal": "false",
+      "logo": "null",
+      "flag": "https://media.api-football.com/flags/us.svg"
+    },
+    {
+      "id": 4,
+      "name": "Charlotte Hornets",
+      "nationnal": "false",
+      "logo": "null",
+      "flag": "https://media.api-football.com/flags/us.svg"
+    },
+    {
+      "id": 5,
+      "name": "Chicago Bulls",
+      "nationnal": "false",
+      "logo": "null",
+      "flag": "https://media.api-football.com/flags/us.svg"
+    }
+  ],
+  "appoinments":[
+
+  ],
+  "doctors":[
+    
+  ]
+}

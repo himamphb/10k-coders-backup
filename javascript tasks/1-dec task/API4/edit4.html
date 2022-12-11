@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit_create</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div style="text-align: center">
+      <button type="button" onclick="mainpage()" class="btn btn-secondary">
+        go to main page
+      </button>
+      <h2>welcome to edit/create page</h2>
+    </div>
+    <div class="container" id="userdetails">
+      <form>
+        <div class="mb-3">
+          <label for="id" class="form-label">id</label>
+          <input type="text" class="form-control" disabled id="id" />
+        </div>
+        <div class="mb-3">
+          <label for="fname" class="form-label">fname</label>
+          <input type="text" class="form-control" id="fname" />
+        </div>
+        <div class="mb-3">
+          <label for="lname" class="form-label">lname</label>
+          <input type="text" class="form-control" id="lname" />
+        </div>
+        <div class="mb-3">
+          <label for="tel" class="form-label">tel</label>
+          <input type="email" class="form-control" id="tel" />
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">address</label>
+          <input type="text" class="form-control" id="address" />
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">city</label>
+          <input type="text" class="form-control" id="city" />
+        </div>
+        <div class="mb-3">
+          <label for="state" class="form-label">state</label>
+          <input type="text" class="form-control" id="state" />
+        </div>
+        <div class="mb-3">
+          <label for="zip" class="form-label">zipcode</label>
+          <input type="text" class="form-control" id="zip" />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="updateuser()">
+          submit
+        </button>
+      </form>
+    </div>
+    <script>
+      function mainpage() {
+        window.location.href = "api4.html";
+      }
+      var mainuser = {};
+      var id;
+      var url = window.location.href;
+      if (url.lastIndexOf("?") > -1) {
+        id = url.substr(url.lastIndexOf("?") + 1);
+      } else {
+        id = null;
+      }
+      fetch("http://localhost:3000/userdetails/" + id)
+        .then((response) => {
+          return response.json();
+        })
+        .then((user) => {
+          mainuser = user;
+          for (a in user) {
+            document.getElementById(a).value = user[a];
+          }
+        });
+
+      function updateuser() {
+        if (id) {
+          var newuser = { ...mainuser };
+          for (a in newuser) {
+            newuser[a] = document.getElementById(a).value;
+          }
+
+          fetch("http://localhost:3000/userdetails/" + id, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newuser),
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then(() => {
+              window.location.href = "api4.html";
+            });
+        } else {
+          var newuser1 = {
+            id: "",
+            fname: "",
+            lname: "",
+            tel: "",
+            address: "",
+            city: "",
+            state: "",
+            zip: "",
+          };
+          for (a in newuser1) {
+            newuser1[a] = document.getElementById(a).value;
+          }
+
+          fetch("http://localhost:3000/userdetails/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newuser1),
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then(() => {
+              window.location.href = "api4.html";
+            });
+        }
+      }
+    </script>
+  </body>
+</html>
