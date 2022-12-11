@@ -24,5 +24,3 @@ var user = {
       document.getElementById(b).value="";
     }
   };
-
-  }

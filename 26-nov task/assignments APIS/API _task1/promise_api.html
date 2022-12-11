@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise_api</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      function getData() {
+        return new Promise((resolve, reject) => {
+          var getInfo = new XMLHttpRequest();
+          getInfo.onreadystatechange = function () {
+            if (getInfo.readyState == 4 && getInfo.status == 200) {
+              data = JSON.parse(getInfo.response);
+              // console.log("the resulted data from the rapidapi is:", data);
+              resolve(data);
+            }
+          };
+          getInfo.open("GET", "https://tech-news3.p.rapidapi.com/venturebeat");
+          getInfo.setRequestHeader(
+            "X-RapidAPI-Key",
+            "c3f5e33920mshb287b2f780d9863p1f4237jsnbf19ef4ef305"
+          );
+          getInfo.setRequestHeader(
+            "X-RapidAPI-Host",
+            "tech-news3.p.rapidapi.com"
+          );
+          getInfo.send();
+        });
+      }
+
+      getData().then((data) => {
+        data.forEach((element) => {
+            var myLi = document.createElement("li");
+            myLi.innerHTML = element.dateTime;
+            document.querySelector("ul").appendChild(myLi);
+          
+        });
+      });
+
+      // console.log("DATETIME from server for every element:",element.dateTime);
+
+      // console.log(Object.keys(data));
+    </script>
+  </body>
+</html>

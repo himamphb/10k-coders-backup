@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback_function</title>
+  </head>
+  <body>
+    <script>
+      
+      function getData() {
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            data = JSON.parse(getInfo.response);
+            console.log(data)
+          }
+        };
+        getInfo.open("GET", "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent");
+        getInfo.setRequestHeader(
+          "X-RapidAPI-Key",
+          "c3f5e33920mshb287b2f780d9863p1f4237jsnbf19ef4ef305"
+        );
+        getInfo.setRequestHeader("X-RapidAPI-Host", "cricbuzz-cricket.p.rapidapi.com");
+        getInfo.send();
+      }
+
+    //   function formatParams(params) {
+    //     return (
+    //       "?" +
+    //       Object.keys(params)
+    //         .map(function (key) {
+    //           return key + "=" + encodeURIComponent(params[key]);
+    //         })
+    //         .join("&")
+    //     );
+    //   }
+
+    //   function streaminginfodetails(){
+    //     var obj = [...data]
+    //     for(a in obj){
+    //       console.log(a)
+    //     }
+    //   }
+      // console.log(formatParams(params));
+      getData();
+    </script>
+  </body>
+</html>
