@@ -1,8 +1,8 @@
-import { Component } from "react";
+import React, { Component } from "react";
 
-class ClassForms1 extends Component {
-  constructor() {
-    super();
+export default class ClassForms1 extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       form1: {
         name: "",
@@ -12,16 +12,32 @@ class ClassForms1 extends Component {
         confirmpassword: "",
         message: "",
       },
-      allusers: [],
-      editIndex: null
+      allusers: [
+        {
+          username: "Murali",
+          password: "krishna",
+          email: "murali@gmail.com",
+        },
+        {
+          username: "sam",
+          password: "sundar",
+          email: "sam@gmail.com",
+        },
+        {
+          username: "kiran",
+          password: "Kumar",
+          email: "kiran@gmail.com",
+        },
+      ],
+      editIndex: null,
     };
   }
-  handlechange(e) {
+  handlechange = (e) => {
     var copiedform = { ...this.state.form1 };
     copiedform[e.target.name] = e.target.value;
     this.setState({ form1: copiedform });
     // console.log(copiedform)
-  }
+  };
   addUser = () => {
     var newdata = [...this.state.allusers];
     newdata.push(this.state.form1);
@@ -40,21 +56,21 @@ class ClassForms1 extends Component {
     };
     this.setState({ form1: newuser });
   };
-  editUser(user,i){
+  editUser(user, i) {
     this.setState({ form1: user, editIndex: i });
   }
   updateUser = () => {
     var latestallusers = [...this.state.allusers];
     latestallusers[this.state.editIndex] = this.state.form1;
     this.setState({ allusers: latestallusers, editIndex: null });
-    this.clearUser() 
+    this.clearUser();
   };
-  deleteUser = (user)=>{
+  deleteUser = (user) => {
     var latestnewuser = this.state.allusers.filter(
       (myuser) => myuser.email !== user.email
     );
     this.setState({ allusers: latestnewuser });
-  }
+  };
   render() {
     return (
       <div>
@@ -126,15 +142,23 @@ class ClassForms1 extends Component {
           />{" "}
           <br />
           <br />
-          {this.state.editIndex !== null ? (<button type="button" className="btn btn-primary" onClick={this.updateUser}>
-            Update user
-          </button>):(<button
-            type="button"
-            className="btn btn-primary"
-            onClick={this.addUser}
-          >
-            Add user
-          </button>) }
+          {this.state.editIndex !== null ? (
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this.updateUser}
+            >
+              Update user
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this.addUser}
+            >
+              Add user
+            </button>
+          )}
           {/* <button
             type="button"
             className="btn btn-primary"
@@ -170,12 +194,14 @@ class ClassForms1 extends Component {
                 <td>{user.confirmpassword}</td>
                 <td>{user.message}</td>
                 <td>
-                  
                   <button
-                    type="button"
                     className="btn btn-secondary"
-                    onClick={()=>{this.editUser(user)}}
-                  >edit</button>
+                    onClick={() => {
+                      this.editUser(user);
+                    }}
+                  >
+                    edit
+                  </button>
                 </td>
                 <td>
                   <button
@@ -195,4 +221,3 @@ class ClassForms1 extends Component {
     );
   }
 }
-export default ClassForms1;

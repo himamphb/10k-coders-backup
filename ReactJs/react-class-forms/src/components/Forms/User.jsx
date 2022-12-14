@@ -8,6 +8,8 @@ class User extends Component {
         fname: "",
         lname: "",
         email: "",
+        dateofbirth: "",
+        mobile: "",
       },
       allusers: [],
       editIndex: null,
@@ -31,6 +33,8 @@ class User extends Component {
       fname: "",
       lname: "",
       email: "",
+      dateofbirth: "",
+      mobile: "",
     };
     this.setState({ person: newuser });
   };
@@ -47,7 +51,7 @@ class User extends Component {
     var latestallusers = [...this.state.allusers];
     latestallusers[this.state.editIndex] = this.state.person;
     this.setState({ allusers: latestallusers, editIndex: null });
-    this.clearUser() 
+    this.clearUser();
   };
   render() {
     return (
@@ -85,14 +89,44 @@ class User extends Component {
               this.handleChange(e);
             }}
           />
+          <br></br>
+          <br></br>
+          <label htmlFor="">Date of Birth:</label>
+          <input
+            type="text"
+            name="dateofbirth"
+            value={this.state.person.dateofbirth}
+            onChange={(e) => {
+              this.handleChange(e);
+            }}
+          />
+          <br></br>
+          <br></br>
+          <label htmlFor="">mobile:</label>
+          <input
+            type="text"
+            name="mobile"
+            value={this.state.person.mobile}
+            onChange={(e) => {
+              this.handleChange(e);
+            }}
+          />
           <br />
           <br />
           {this.state.editIndex !== null ? (
-            <button type="button" onClick={this.updateUser} className="btn btn-primary" >
+            <button
+              type="button"
+              onClick={this.updateUser}
+              className="btn btn-primary"
+            >
               update user
             </button>
           ) : (
-            <button type="button" onClick={this.addUser} className="btn btn-primary">
+            <button
+              type="button"
+              onClick={this.addUser}
+              className="btn btn-primary"
+            >
               Add user
             </button>
           )}
@@ -111,6 +145,8 @@ class User extends Component {
               <th>First</th>
               <th>Last</th>
               <th>email</th>
+              <th>date of birth</th>
+              <th>mobile</th>
               <th>edit</th>
               <th>delete</th>
             </tr>
@@ -121,6 +157,8 @@ class User extends Component {
                 <td>{user.fname}</td>
                 <td>{user.lname}</td>
                 <td>{user.email}</td>
+                <td>{user.dateofbirth}</td>
+                <td>{user.mobile}</td>
                 <td>
                   <button
                     className="btn btn-warning"
