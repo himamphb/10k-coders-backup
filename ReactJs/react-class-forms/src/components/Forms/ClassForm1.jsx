@@ -13,21 +13,21 @@ export default class ClassForms1 extends Component {
         message: "",
       },
       allusers: [
-        {
-          username: "Murali",
-          password: "krishna",
-          email: "murali@gmail.com",
-        },
-        {
-          username: "sam",
-          password: "sundar",
-          email: "sam@gmail.com",
-        },
-        {
-          username: "kiran",
-          password: "Kumar",
-          email: "kiran@gmail.com",
-        },
+        // {
+        //   username: "Murali",
+        //   password: "krishna",
+        //   email: "murali@gmail.com",
+        // },
+        // {
+        //   username: "sam",
+        //   password: "sundar",
+        //   email: "sam@gmail.com",
+        // },
+        // {
+        //   username: "kiran",
+        //   password: "Kumar",
+        //   email: "kiran@gmail.com",
+        // },
       ],
       editIndex: null,
     };
@@ -60,7 +60,7 @@ export default class ClassForms1 extends Component {
     this.setState({ form1: user, editIndex: i });
   }
   updateUser = () => {
-    var latestallusers = [...this.state.allusers];
+    var latestallusers = [...this.state.allusers]
     latestallusers[this.state.editIndex] = this.state.form1;
     this.setState({ allusers: latestallusers, editIndex: null });
     this.clearUser();
