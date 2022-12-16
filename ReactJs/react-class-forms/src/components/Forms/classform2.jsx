@@ -233,7 +233,7 @@ class ClassForms2 extends Component {
                     type="button"
                     className="btn btn-secondary"
                     onClick={() => {
-                      this.editUser(user);
+                      this.editUser(user.i);
                     }}
                   >
                     edit

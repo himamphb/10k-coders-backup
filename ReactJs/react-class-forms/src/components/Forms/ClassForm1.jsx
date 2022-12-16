@@ -197,7 +197,7 @@ export default class ClassForms1 extends Component {
                   <button
                     className="btn btn-secondary"
                     onClick={() => {
-                      this.editUser(user);
+                      this.editUser(user,i);
                     }}
                   >
                     edit

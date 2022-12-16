@@ -163,7 +163,7 @@ class User extends Component {
                   <button
                     className="btn btn-warning"
                     onClick={() => {
-                      this.editUser(user);
+                      this.editUser(user,i);
                     }}
                   >
                     edit
