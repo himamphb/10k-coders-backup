@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.create a function that takes two numbers as arguments and return
+        //     function add(x,y){
+        //         return x+y;
+        // }
+        // console.log(add(2,3))
+
+        //2.Write a function that takes an integer minutes and converts it to seconds.
+        // function convert(minutes){
+        //     return minutes*60;
+        // }
+        // console.log(convert(2))
+
+        //3.Create a function that takes a number as an argument, increments the number by +1 and returns the result
+        // function increments(number){
+        //     return number+=1;
+        // }
+        // console.log(increments(10));
+
+        //4.Create a function that takes the age in years and returns the age in days.
+        // function coversionofage(){
+        //     var age = 20;
+        //     return age*365;
+        // }
+        // console.log(coversionofage());
+
+        //5.Create a function that takes voltage and current and returns the calculated power.
+        // function calculatedpower(){
+        //     const voltage=20
+        //     const current = 20
+        //     return 20*20
+        // }
+        // console.log(calculatedpower());
+
+        //6.Write a function that returns the string "something" joined with a space " " and the given argument a.
+        // function returnstring() {
+        //         var string = "something"
+        //         var argument = "a"
+        //         console.log(string + " " + argument);
+        // }
+        // returnstring()
+
+        //7.Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
+
+        // function returnstate(a,b){
+        //         if(a==10 || b==10 || a+b==10){
+
+        //           return console.log(true)
+        //         }
+        //         else{
+
+        //            return  console.log(false)
+        //         }
+
+        //     }
+        //     returnstate(4,1)
+
+        //8.Create a function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+        // var string1 = "himam";
+        // var string2 = "basha";
+        // function returnstate(string1, string2) {
+        //     if (string1.length == string2.length) {
+        //         return console.log(true)
+        //     } else {
+        //         return console.log(false)
+        //     }
+        // }
+        // returnstate(string1, string2)
+
+        //9.Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function.
+        // var arrfunction = (himam) => "hi himam!";
+        // console.log(arrfunction);
+
+        //10.Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
+        //     var numbers = [0,1,2,3,4,5,6,7,8,9]
+        //     function createPhoneNumber(numbers) {
+        //         let firstpart = ""
+        //         let secondpart = ""
+        //         let thirdpart = ""
+        //         for (var i = 0; i < numbers.length; i++) {
+        //             if (i < 3) {
+        //                 firstpart += numbers[i].toString()
+        //             } else if (i >= 3 && i < 6) {
+        //                 secondpart += numbers[i].toString()
+        //             } else if (i >= 6) {
+        //                 thirdpart += numbers[i].toString()
+        //             }
+        //         }
+        // return `(${firstpart}) ${secondpart}-${thirdpart}`
+        //     }
+        //     console.log(createPhoneNumber(numbers))
+
+        // 11.array of strings sorted by length  in ascending order 
+        // var sortByLength = ["a", "ccc", "dddd", "bb"]
+        // function ascendingOrederArray() {
+        //     return sortByLength.sort((a, b) =>  a.length - b.length )
+        // }
+        // console.log(ascendingOrederArray());
+
+        //12. return the largest numbers from each array to single array [7,90,2]
+        // var myArray = [[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]
+        // var singleArray = []
+        // function arrayOfarray(myArray) {
+        //     myArray.forEach((array) => {
+        //         singleArray.push(Math.max(...array))
+
+        //     })
+        //     return singleArray
+        // }
+        // console.log(arrayOfarray(myArray));
+
+        // 13.return the second largest number from array
+        // var myArray = [10, 40, 30, 20, 50]
+        // var firstNumber = myArray[0]
+        // var secondNumber = myArray[0]
+        // function returnSecondlargestNumber(){
+        //     myArray.forEach(array=>{
+        //     if(array > firstNumber){
+        //         secondNumber = firstNumber
+        //         firstNumber = array;
+        //     }else if(array  > secondNumber && array != firstNumber){
+        //         secondNumber = array
+        //     }
+        // })
+        // return secondNumber
+        // }
+        // console.log(returnSecondlargestNumber());
+
+        // 14. remove duplicates from array 
+        // var array = [1,0,1,0]
+        // var newarray = [...new Set(array)]
+
+        //     console.log(newarray)
+
+        // 15.unique value in array <!----------doubt--------------------------------------->
+
+        // 16.char count in an array od strings
+        // var ar = ["c", "Chamber of secrets"], o = {}
+        // ar.forEach(w => w.split('').forEach(e => o[e] = (o[e] || 0) + 1));
+        // console.log(o)
+
+        // 17.find the count of vowels in the string
+        // var vowels = ["a", "e", "i", "o", "u"]
+        // var string = "celebration"
+        // var count = 0
+        // function countString(){
+        //     vowels.forEach((ele)=>{
+        //         for(a in string){
+        //             if(string[a]==ele){
+        //                 count+=1
+        //             }
+        //     }
+        //     })
+        //     return count
+        // }
+
+        // console.log(countString());
+
+        // 18.upper to lowercase and viceversa  [it can be done in replace method]
+        // var mystring = "Happy Birthday"
+        // var updatedstring = mystring.replace("Happy Birthday","hAPPY bIRTHDAY")
+        // console.log(updatedstring);
+
+        // 19.function that takes one integer parameter, and multiply with 2 in every integer
+        // var myArray = [1, 2, 3, 4, 5]
+        // var multipliedArray=[]
+        // function multipliedArrayby2() {
+        //     myArray.forEach((element) => {
+                
+        //         multipliedArray.push(element * 2)
+        //     })
+        //     console.log(multipliedArray)
+        // }
+        // multipliedArrayby2()
+
+        //20.Function that will take one parameter and return type of the data
+        // var mydatatype = "500" 
+        // console.log(typeof(mydatatype));
+
+        // 21.find greatest of three numbers(using ternery operator)
+        // var n1= 100;
+        // var n2= 12 ;
+        // var n3 = 20;
+        
+        // var greatest = n1 > n2 ? (n1 > n3 ? n1 : n3) : (n2 > n3 ? n2 : n3)
+        // console.log(greatest);
+
+        // 22.Program to find factorial of number
+        // var number = 5
+        // var factorial = number;
+        
+        //     for(var i = 1;i < number ; i++){
+        //         factorial = factorial * (number - i);
+                
+        //     }
+        //     console.log(factorial);
+        
+        // 23. Program to arrange numbers in ascending order
+        // var myArray = [5,10,3,13,2]
+        // for(var i = 0;i < myArray.length;i++){
+        //     for(var j = i+1;j < myArray.length; j++){
+        //         if(myArray[i] > myArray[j]){
+        //             var temp = myArray[i]
+        //             myArray[i] = myArray[j]
+        //             myArray[j] = temp
+        //         }
+        //     }
+        // }
+        // console.log(myArray)
+
+        //24.print loop using loop
+        // var row = 5;
+        // var string = ""
+        // for(var i = 1; i <= row; i++){
+        //     for(var j = 1;j <= i ; j++){
+        //        string = 
+        //     }
+        //    string += "\n"
+        // }
+        // console.log(string)
+        
+        //25.Program to Calculate the Power of a Number(using loop only).
+        
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit_page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      div {
+        text-align: center;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button type="button" class="btn btn-secondary" onclick="gotoMainpage()">
+        GotoMainpagge
+      </button>
+      <h2>welcome to edit/create page</h2>
+    </div>
+    <div class="container" id="userdetails">
+      <form>
+        <div class="mb-3">
+          <label for="id" class="form-label">id</label>
+          <input type="text" class="form-control" disabled id="id" />
+        </div>
+        <div class="mb-3">
+          <label for="value" class="form-label">value</label>
+          <input type="text" class="form-control" id="value" />
+        </div>
+        <div class="mb-3">
+          <label for="key" class="form-label">key</label>
+          <input type="text" class="form-control" id="key" />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="updateUser()">
+          submit
+        </button>
+      </form>
+    </div>
+    <script>
+        maindata =
+        function gotoMainpage(){
+            window.location.href="api3.html"
+        }
+      var id;
+      var url = window.location.href;
+      if(url.lastIndexOf("?")>-1){
+        id = url.substr(url.lastIndexOf("?") + 1);
+      }else{
+        id = null
+      }
+      fetch("http://localhost:3000/continents/" + id)
+        .then((Response) => {
+          return Response.json();
+        })
+        .then((user) => {
+          maindata = user;
+          for (a in user) {
+              document.getElementById(a).value = user[a];
+            }
+          })
+          function updateUser(){
+            if (id) {
+          var newuser = { ...maindata };
+          for (a in newuser) {
+            
+              newuser[a] = document.getElementById(a).value;
+            }
+            fetch("http://localhost:3000/continents/" + id, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newuser),
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then(() => {
+              window.location.href = "api3.html";
+            });
+          }else{
+            var newuser1 = {
+            id:"",
+           value:"",
+           key:""
+          };
+          for (a in newuser1) {
+            
+              newuser1[a] = document.getElementById(a).value;
+            }
+          
+          fetch("http://localhost:3000/continents/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newuser1),
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then(() => {
+              window.location.href = "api3.html";
+            });
+          }
+          }
+    </script>
+  </body>
+</html>

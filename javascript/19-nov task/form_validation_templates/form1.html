@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 1</title>
+    <style>
+      #formdata{
+        text-align: left;
+      }
+      #usertable{
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="formdata">
+      <form>
+        <label for="personname">name:</label>
+        <input type="text" id="personname" /><br />
+        <label for="username">username:</label>
+        <input type="text" id="username" /><br />
+        <label for="email">email:</label>
+        <input type="text" id="email" /><br />
+        <label for="password">password:</label>
+        <input type="text" id="password" /><br />
+        <label for="conpassword">confirm password:</label>
+        <input type="text" id="conpassword" /><br />
+        <label for="messaage">messaage:</label>
+        <input type="text" name="" id="message" /><br />
+  
+        <button type="button" onclick="getUser()">Get User</button>
+      </form>
+    </div>
+    <br><br>
+    <script src="../form_validation_templates/create_data.js"></script>
+    <script src="../form_validation_templates/read_data.js"></script>
+
+    <div id="userTable">
+      <table border="1">
+          <thead>
+              <tr>
+                  <th>name</th>
+                  <th>username</th>
+                  <th>email</th>
+                  <th>password</th>
+                  <th>confirmed password</th>
+                  <th>message</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+  </div>
+  </body>
+</html>

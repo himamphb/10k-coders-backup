@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>api3-page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>value</th>
+          <th>key</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var allcontinents = [];
+      function getdatafromserver() {
+        fetch("http://localhost:3000/continents")
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            allcontinents = data;
+            console.log(data);
+            displayallcontinents(data);
+          });
+      }
+      function displayallcontinents(data) {
+        data.forEach((element, i) => {
+          var myTr = document.createElement("tr");
+          for (a in element) {
+            var myTd = document.createElement("td");
+            myTd.innerHTML = element[a];
+            myTr.appendChild(myTd);
+          }
+          var editTd = document.createElement("td");
+          var editBtn = document.createElement("button");
+          editBtn.innerHTML = "edit";
+          editBtn.setAttribute("class", "btn btn-warning");
+          editBtn.setAttribute("onclick", "editUser(" + i + ")");
+          editTd.appendChild(editBtn);
+          myTr.appendChild(editTd);
+
+          var deleteTd = document.createElement("td");
+          var deleteBtn = document.createElement("button");
+          deleteBtn.innerHTML = "delete";
+          deleteBtn.setAttribute("class", "btn btn-primary");
+          deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+          deleteTd.appendChild(deleteBtn);
+          myTr.appendChild(deleteTd);
+
+          document.querySelector("tbody").appendChild(myTr);
+        });
+      }
+      getdatafromserver();
+
+      function editUser(i) {
+        window.location.href = "edit3.html?" + allcontinents[i].id;
+      }
+      function deleteUser(i) {
+        window.location.href = "delete3.html?" + allcontinents[i].id
+      }
+    </script>
+  </body>
+</html>

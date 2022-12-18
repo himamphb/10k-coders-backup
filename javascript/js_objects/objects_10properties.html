@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>javascript object</title>
+</head>
+<body>
+     <h2>object1</h2>
+     <script>
+          var person = {
+                      name:"himam basha",
+                      mail:"himamphb124@gmail.com",
+                      mobile:9951941987,
+                      city:"kurnool",
+                    } ;
+         
+          person.name="pinjari hb";
+          person['city']="hyderabad";
+          person.mobile=9951941997;
+          document.write("city : " + person.city + "<br> name : " + person.name)
+          console.log(person)   
+     </script>
+     <h2>object2</h2>
+     <script>
+          
+          const person1 = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    age: 50,
+                    eyeColor: "blue"
+                    };
+          document.write("firstname : " + person1.firstName + "<br> lastname : " + person1.lastName)
+          console.log(person1) 
+     </script>
+     <h2>object3</h2>
+     <script>
+          const cars= {
+               car1:"audi",
+               car2:"bugati",
+               car3:"ferari"
+          };
+          cars['car2'] = "ford";
+          for(var a in cars){
+                   document.write(a+":" +  cars[a] + "<br>") 
+               }
+          console.log(cars)
+     </script>
+     <h2>object4</h2>
+     <script>
+         const emp=
+         {id:102,
+          name:"vinay Kumar",
+          salary:40000}  
+          document.write(emp.id+" "+emp.name+" "+emp.salary); 
+          console.log(emp)
+     </script>
+     <h2>object5</h2>
+     <script>
+          var emp1 = new Object();  
+          emp1.id=101;  
+          emp1.name="Ravi Malik";  
+          emp1.salary=50000;  
+          document.write(emp1.id+" "+emp1.name+" "+emp1.salary); 
+          console.log(emp1)
+     </script>
+    <h2>object6</h2>
+    <script>  
+     function emp3(id,name,salary){  
+     this.id=id;  
+     this.name=name;  
+     this.salary=salary;  
+     }  
+     e=new emp3(103,"Vimal Jaiswal",30000);  
+       
+     document.write(e.id+" "+e.name+" "+e.salary); 
+     console.log(e) 
+     </script> 
+     <h2>object7</h2> 
+     <script>
+          const person3 = {
+               firstName: "John",
+               lastName : "Doe",
+               id       : 5566,
+               fullName : function() {
+               return this.firstName + " " + this.lastName;
+               }
+          };
+          document.write(person3.fullName());
+          console.log(person3.fullName())
+     </script>
+</body>
+</html>

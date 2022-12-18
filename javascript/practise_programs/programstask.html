@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // <!------ finding the elements count how many times it is repeated ------>
+
+        // var myArray1 = [0, 0, -1, -2, -3, 1, 1, 3, 3, 4, -5, 5]
+        // var myArray2 = [...new Set(myArray1)]
+        // myArray2.forEach((Element2)=>{
+        //     var count = 0;
+        //     myArray1.forEach((Element1)=>{
+        //         if(Element1==Element2){
+        //             count++;
+        //         }
+        //     })
+        //     console.log(Element2+"is"+count+"times");
+        // })
+
+        // <!-------- print sum of positive integers with reduce --------->
+
+        // var myArray = [0,0,-1,-2,-3,1,1,3,3,4,-5,5]
+        // var filterArray = myArray.filter(element => element >= 0);
+        // console.log(filterArray);
+        // var totalSum =   filterArray.reduce((a,b)=>{
+        //     return a+b;
+        // })
+        // console.log(totalSum)
+
+        // <!------- find the second highest number ----------> 
+
+        var myNumber = [15, 3, 7, 8, 44, 123, 444, 22]
+        var mylargestNum = myNumber[0]
+        var mySecondlargestNum = myNumber[0]
+            myNumber.forEach((element) => {
+                if (element > mylargestNum ) {
+                    mySecondlargestNum = mylargestNum
+                    mylargestNum = element
+                } else if (element > mySecondlargestNum && element != mylargestNum){
+                    mySecondlargestNum = element
+                }
+                     
+            })
+            console.log(mySecondlargestNum); 
+    </script>
+</body>
+
+</html>

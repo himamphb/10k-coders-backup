@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variable_declaration</title>
+  </head>
+  <body>
+    <script>
+      // var myname = "himam"
+      // var myname = "basha"
+      // console.log(myname)
+
+      // let myName = "himam basha"
+      // let mYName = "phb"
+      // mYName="Pinjari"
+      // console.log(mYName);
+
+      // const name1 = [0,1,3]
+      // name1[2]=2
+
+      // name1.forEach((element)=>{
+      //     console.log(element);
+      // })
+      // promise concept
+      //   let myPromise = new Promise((resolve, reject) => {
+      //     reject();
+      //   });
+      //   myPromise
+      //     .then(() => {
+      //       setTimeout(function () {
+      //         console.log("hey  i am resolve");
+      //       }, 2000);
+      //     })
+      //     .catch(() => {
+      //       console.log("hey  i am reject");
+      //     });
+
+      //   function myDisplayer(value) {
+      //     console.log("the result is:")
+      //   }
+      //   let userPromise = new Promise(function (myResolve, myReject) {
+      //     let x = 0;
+
+      //     if (x == 0) {
+      //       myResolve("OK");
+      //     } else {
+      //       myReject("Error");
+      //     }
+      //   });
+
+      //   userPromise.then(
+      //     function (value) {
+      //       myDisplayer(value);
+      //     },
+      //     function (error) {
+      //       myDisplayer(error);
+      //     }
+      //   );
+    </script>
+
+    <p id="demo"></p>
+
+    <script>
+      function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+      }
+
+      let myPromise = new Promise(function (myResolve, myReject) {
+        let x = 0;
+
+        // some code (try to change x to 5)
+
+        if (x == 2) {
+          myResolve("OK");
+        } else {
+          myReject("Error");
+        }
+      });
+
+      myPromise.then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
+        }
+      );
+    </script>
+  </body>
+</html>

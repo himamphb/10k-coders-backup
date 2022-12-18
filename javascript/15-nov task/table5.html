@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      var a = [
+        {
+          id: 1,
+          userId: 1,
+          date: "2020-03-02T00:00:02.000Z",
+          products: [
+            { productId: 1, quantity: 4 },
+            { productId: 2, quantity: 1 },
+            { productId: 3, quantity: 6 },
+          ],
+          __v: 0,
+        },
+        {
+          id: 2,
+          userId: 1,
+          date: "2020-01-02T00:00:02.000Z",
+          products: [
+            { productId: 2, quantity: 4 },
+            { productId: 1, quantity: 10 },
+            { productId: 5, quantity: 2 },
+          ],
+          __v: 0,
+        },
+        {
+          id: 3,
+          userId: 2,
+          date: "2020-03-01T00:00:02.000Z",
+          products: [
+            { productId: 1, quantity: 2 },
+            { productId: 9, quantity: 1 },
+          ],
+          __v: 0,
+        },
+        {
+          id: 4,
+          userId: 3,
+          date: "2020-01-01T00:00:02.000Z",
+          products: [{ productId: 1, quantity: 4 }],
+          __v: 0,
+        },
+        {
+          id: 5,
+          userId: 3,
+          date: "2020-03-01T00:00:02.000Z",
+          products: [
+            { productId: 7, quantity: 1 },
+            { productId: 8, quantity: 1 },
+          ],
+          __v: 0,
+        },
+        {
+          id: 6,
+          userId: 4,
+          date: "2020-03-01T00:00:02.000Z",
+          products: [
+            { productId: 10, quantity: 2 },
+            { productId: 12, quantity: 3 },
+          ],
+          __v: 0,
+        },
+        {
+          id: 7,
+          userId: 8,
+          date: "2020-03-01T00:00:02.000Z",
+          products: [{ productId: 18, quantity: 1 }],
+          __v: 0,
+        },
+      ];
+
+      var table = document.createElement("table");
+      document.querySelector(".container").appendChild(table);
+      var thead = document.createElement("thead");
+      table.appendChild(thead);
+      var thtr = document.createElement("tr");
+      thead.appendChild(thtr);
+      var theading = a[0];
+      for (i in theading) {
+        var th = document.createElement("th");
+        th.innerHTML = i;
+        thtr.appendChild(th);
+      }
+
+      var tbody = document.createElement("tbody");
+      table.appendChild(tbody);
+      a.forEach((user) => {
+        var tr = document.createElement("tr");
+        for (i in user) {
+          var td = document.createElement("td");
+          if (i !== "products" && i !== "__v" && i !== "date") {
+            console.log(user[i]);
+            td.innerHTML = user[i];
+            tr.appendChild(td);
+          } else if (i == "products") {
+            var mytable = document.createElement("table");
+            user[i].forEach((items) => {
+              var mytr = document.createElement("tr");
+              for (j in items) {
+                var mytd = document.createElement("td");
+                mytd.style.width = "200px";
+                mytd.style.textAlign = "center";
+                mytd.innerHTML = j + ":" + items[j];
+                mytr.appendChild(mytd);
+              }
+              mytd.style.width = "200px";
+              mytable.appendChild(mytr);
+            });
+            td.appendChild(mytable);
+            tr.appendChild(td);
+          } else if (i == "date") {
+            console.log(user[i]);
+            td.innerHTML = new Date(user[i]).toDateString();
+            tr.appendChild(td);
+          }
+        }
+        tbody.appendChild(tr);
+      });
+    </script>
+  </body>
+</html>
