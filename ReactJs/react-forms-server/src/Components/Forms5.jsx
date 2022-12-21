@@ -195,7 +195,7 @@ export default class Forms5 extends Component {
                   {" "}
                   <button
                     type="button"
-                    onClick={this.deleteuser(user)}
+                    onClick={this.deleteuser(user,i)}
                     className="btn btn-secondary"
                   >
                     delete
@@ -209,7 +209,7 @@ export default class Forms5 extends Component {
     );
   }
   async componentDidMount() {
-    let response = await axios.get("http://localhost:3005/form5");
+    let response = await axios.get("http://localhost:3005/form5/");
     // console.log(response);
     this.setState({ allEmployers: response.data });
   }
