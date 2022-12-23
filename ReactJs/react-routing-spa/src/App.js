@@ -15,10 +15,11 @@ function App() {
           <Route path="/edit" element = {<Edit/>}/>
           <Route path="/delete" element = {<Delete/>}/>
           <Route path="/create" element = {<Create/>}/>
-          <Route path="/" element = {<Footer/>}/>
+          {/* <Route path="/" element = {<Footer/>}/> */}
         </Route>
+       
      </Routes>
-     {/* <Route path="/" element = {<Footer/>}></Route>  */}
+     <Footer/>
      </BrowserRouter>
     </div>
   );
