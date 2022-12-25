@@ -57,44 +57,46 @@
   ],
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "name": "himam phb",
       "username": "basha",
-      "email": "himamphb123",
-      "phone": "123456",
-      "website": "www.himam.com"
+      "email": "himamphb123"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "murari",
       "username": "maheshha",
-      "email": "mahesh123",
-      "phone": "1999000",
-      "website": "www.mahesh.com"
+      "email": "mahesh123"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "chitran",
       "username": "kuma",
-      "email": "kumar123",
-      "phone": "9999999",
-      "website": "www.kumar.com"
+      "email": "kumar123"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "raam vardah",
       "username": "dinesh",
-      "email": "dineshkumar123",
-      "phone": "7777888",
-      "website": "www.dieshkumar.com"
+      "email": "dineshkumar123"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "mitran phb",
       "username": "vignesh",
-      "email": "vignesh7788",
-      "phone": "56723",
-      "website": "www.mitran.com"
+      "email": "vignesh7788"
+    },
+    {
+      "0": {
+        "id": "",
+        "name": "",
+        "username": "",
+        "email": ""
+      },
+      "name": "Pinjari Himam Basha",
+      "email": "himamphb124@gmail.com",
+      "id": 6,
+      "username": "phbasha"
     }
   ],
   "continents": [
@@ -316,10 +318,6 @@
       "flag": "https://media.api-football.com/flags/us.svg"
     }
   ],
-  "appoinments":[
-
-  ],
-  "doctors":[
-    
-  ]
+  "appoinments": [],
+  "doctors": []
 }

@@ -1,3 +1,51 @@
 {
-  "form1": []
+  "form1": [
+    {
+      "0": {
+        "university": "",
+        "institute": "",
+        "branch": "",
+        "degree": "",
+        "status": "",
+        "cgpa": "",
+        "upto": "",
+        "experience": "",
+        "website": ""
+      },
+      "iduniversity": "vtu",
+      "id": 1,
+      "university": "Visvesvaraya Technological University",
+      "institute": "Jyothi IOT",
+      "cgpa": "7.54",
+      "upto": "7",
+      "experience": "2",
+      "website": "44",
+      "degree": "bsc",
+      "branch": "eee",
+      "status": "completed"
+    },
+    {
+      "0": {
+        "university": "",
+        "institute": "",
+        "branch": "",
+        "degree": "",
+        "status": "",
+        "cgpa": "",
+        "upto": "",
+        "experience": "",
+        "website": ""
+      },
+      "university": "RJMS",
+      "institute": "Jyothi IOT",
+      "branch": "cse",
+      "degree": "biotech",
+      "status": "completed",
+      "cgpa": "7.54",
+      "upto": "7",
+      "experience": "2",
+      "website": "hildegard.org",
+      "id": 2
+    }
+  ]
 }

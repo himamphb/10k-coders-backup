@@ -1,9 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import UserForm from "./UserForm";
 
 export const Create = () => {
+  const [user, setUser] = useState([
+    { id: "", name: "", username: "", email: "" },
+  ]);
+  const navigate = useNavigate();
+
+  const handlechange = (e) => {
+    var newUSer = { ...user };
+    newUSer[e.target.name] = e.target.value;
+    setUser(newUSer);
+  };
+
+  const handleSubmit = () => {
+    fetch("http://localhost:3201/users", {
+      method: "post",
+      body: JSON.stringify(user),
+      headers: { "Content-Type": "application/json" },
+    }).then(() => {
+      // ClearForm();
+      navigate("/");
+    });
+    const ClearForm = () => {
+      setUser({ id: "", name: "", username: "", email: "" });
+    };
+  };
   return (
-    <div>
+    <div className="container">
       <h2>welcome to Create</h2>
+      <UserForm
+        handlechange={handlechange}
+        handleSubmit={handleSubmit}
+        user={user}
+        btnText={"Create user"}
+      />
     </div>
   );
 };

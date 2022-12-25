@@ -4,8 +4,10 @@ import { useState } from "react";
 import { useEffect } from "react";
 import User from "./User";
 
+import UserForm from "./UserForm";
+
 export const Users = () => {
-  const [users, setUsers] = useState([]);
+  const [user, setUsers] = useState([]);
   useEffect(() => {
     getAllUsers();
   }, []);
@@ -18,8 +20,8 @@ export const Users = () => {
       <table className="table">
         <thead>
           <tr>
-            <th>#</th>
-            <th> Name</th>
+            <th>ID</th>
+            <th>Name</th>
             <th>User Name</th>
             <th>Email</th>
             <th>Edit</th>
@@ -27,7 +29,7 @@ export const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((person, i) => (
+          {user.map((person, i) => (
             <User usr={person} key={i} />
           ))}
         </tbody>
