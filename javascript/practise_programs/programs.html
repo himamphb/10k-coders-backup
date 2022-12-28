@@ -343,15 +343,34 @@
 
         // 5.function that moves all capital letters to the front of a word 
 
-        const string = "hAPPy"
-        const upString = string.split('')
-        console.log(upString);
-        const result = function findCapitaLetters() {
-            for (i = 0; i <= upString; i++) {
-                if(upString[i] != upString.toUpperCase())
+        // const string = "hAPPy"
+        // const upString = string.split('')
+        // console.log(upString);
+        // const result = function findCapitaLetters() {
+        //     for (i = 0; i <= upString; i++) {
+        //         if(upString[i] != upString.toUpperCase())
+        //     }
+        // }
+
+        // 6.Count each occurrence of number
+        const array = [1, 6, 3, 1, 5, 9, 7, 2, 1, 9, 3, 7, 8, 9, 7, 10]
+        function occurrenceofNumber() {
+            var count = 0;
+            for (var i = 0; i < array.length; i++) {
+
+                for (var j = i + 1; j < array.length; j++) {
+                    if (array[i] == 7) {
+                        count = count + 1
+                    }
+                }
+
+                console.log(count);
             }
+
+            return count
         }
 
+        console.log(occurrenceofNumber());
     </script>
 </body>
 
