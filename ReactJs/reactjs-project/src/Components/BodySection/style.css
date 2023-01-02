@@ -1,0 +1,22 @@
+.container {
+  background-color: pink;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+/* #carouselExampleInterval {
+  height: 100%;
+  display: flex;
+} */
+/* .carousel-inner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+} */
+.carousel-item img{
+  width: 100vw;
+  height: 80vh;
+  align-items: center;
+}
+
