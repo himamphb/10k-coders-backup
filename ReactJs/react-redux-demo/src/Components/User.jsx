@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addUserAction, deleteUserAction } from "./Actions";
+import { addUserAction, deleteUserAction } from "../Store/Actions";
 
 class User extends Component {
+  
   render() {
+    const {allUsers} = this.props
     console.log(this.props);
     return (
       <div>
         <button onClick={this.props.addUser}>Add User</button>
         {/* <button onClick={this.props.deleteUser}>Delete User</button> */}
         <ul>
-          {this.props.allUsers &&
-            this.props.allUsers.map((user, i) => (
+          {
+           allUsers.map((user, i) => (
               <li
                 key={i}
                 onClick={() => {
@@ -30,6 +32,7 @@ function mapStateToProps(state) {
   console.log(state);
   return {
     allUsers: state.users,
+    
   };
 }
 function mapDispatchToProps(dispatch) {

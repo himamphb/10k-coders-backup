@@ -4,30 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { store } from "./Store/MainStore";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const defaultState = {
-  users: ["Murali", "Krishna", "Ram", "Ravi"],
-};
-
-const reducer = (state = defaultState, action) => {
-  switch (action.type) {
-    case "ADDUSER":
-      let newUsers = [...state.users];
-      newUsers.push(action.paload);
-      return { ...state, users: newUsers };
-    case "DELETEUSER":
-      let updatedUsers = state.users.filter((user) => user !== action.paload);
-      return { ...state, users: updatedUsers };
-    default:
-      return state;
-  }
-};
-
-const store = createStore(reducer);
-console.log(store);
 
 root.render(
   <React.StrictMode>
