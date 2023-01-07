@@ -75,28 +75,19 @@
       "email": "kumar123"
     },
     {
-      "id": 4,
-      "name": "raam vardah",
-      "username": "dinesh",
-      "email": "dineshkumar123"
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "mitran phb",
-      "username": "vignesh",
-      "email": "vignesh7788"
+      "id": 5
     },
     {
-      "0": {
-        "id": "",
-        "name": "",
-        "username": "",
-        "email": ""
-      },
-      "name": "Pinjari Himam Basha",
-      "email": "himamphb124@gmail.com",
-      "id": 6,
-      "username": "phbasha"
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
     }
   ],
   "continents": [
