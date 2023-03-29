@@ -224,7 +224,7 @@
         // var string = ""
         // for(var i = 1; i <= row; i++){
         //     for(var j = 1;j <= i ; j++){
-        //        string =
+        //        string += i
         //     }
         //    string += "\n"
         // }
@@ -291,9 +291,9 @@
         //     var person = {
         //         shrimp: 15,
         //         tots: 12,
-        //         wickets : 5
+        //         wickets: 5
         //     }
-        //     var person2 = { a: 1, b: 2 , c : 3 }
+        //     var person2 = { a: 1, b: 2, c: 3 }
 
         //     console.log(Object.entries(person))
         //     console.log(Object.entries(person2))
@@ -324,53 +324,153 @@
         //     console.log(users);
 
         // 4. find the average of notes in array of objects
-        // var result;
-        // var obj = [
-        //     { name: "John", notes: [3, 5, 4] }
-        // ]
-        // function respond() {
-        //     obj.forEach((ele) => {
-        //         if (ele == "notes") {
 
-        //             result = ele.reduce((total, val) =>
-        //                 total + val, 0) / 3
-
-        //         }
-        //     })
-        //     return result;
+        // function averageNotes(students) {
+        //     return students.map(student => {
+        //         const avgNote = student.notes.reduce((sum, note) => sum + note, 0) / student.notes.length;
+        //         return { name: student.name, avgNote: avgNote };
+        //     });
         // }
-        // console.log(respond());
+        // console.log(averageNotes([{ name: "John", notes: [3, 5, 4] }]));
+
 
         // 5.function that moves all capital letters to the front of a word
 
-        // const string = "hAPPy"
-        // const upString = string.split('')
-        // console.log(upString);
-        // const result = function findCapitaLetters() {
-        //     for (i = 0; i <= upString; i++) {
-        //         if(upString[i] != upString.toUpperCase())
+
+        // function moveCapitals(word) {
+        //     let capitals = "";
+        //     let rest = "";
+        //     for (let char of word) {
+        //         if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
+        //             capitals += char;
+        //         } else {
+        //             rest += char;
+        //         }
         //     }
+        //     return capitals + rest;
         // }
+        // console.log(moveCapitals("hAPPy"));
+
+
 
         // 6.Count each occurrence of number
-        // const array = [1, 6, 3, 1, 5, 9, 7, 2, 1, 9, 3, 7, 8, 9, 7, 10]
-        // function occurrenceofNumber() {
-        //     var count = 0;
-        //     for (var i = 0; i < array.length; i++) {
+        // function countEachOccurrence(arr) {
+        //     const result = {};
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (result[arr[i]]) {
+        //             result[arr[i]]++;
+        //         } else {
+        //             result[arr[i]] = 1;
+        //         }
+        //     }
+        //     return result;
+        // }
 
-        //         for (var j = i + 1; j < array.length; j++) {
-        //             if (array[i] == 7) {
-        //                 count = count + 1
+        // const numbers = [1, 6, 3, 1, 5, 9, 7, 2, 1, 9, 3, 7, 8, 9, 10];
+        // console.log(countEachOccurrence(numbers));
+
+
+        // 7.return the longest string in array of strings
+        // var myLongString = (array) => {
+        //     let longestString = "";
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (array[i].length > longestString.length) {
+        //             longestString = array[i];
+        //         }
+        //     }
+        //     return longestString;
+        // }
+        // const myArray = ['nik', 'mikhil', 'Cow', 'Elephant']
+        // console.log(myLongString(myArray));
+
+        // 8.Write Program to remove duplicate elements in an array and sort it in descending order(can not use predefined function).
+
+        // function removeDuplicates(arr) {
+        //     const result = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         let isDuplicate = false;
+        //         for (let j = 0; j < result.length; j++) {
+        //             if (arr[i] === result[j]) {
+        //                 isDuplicate = true;
+        //                 break;
+        //             }
+        //         }
+        //         if (!isDuplicate) {
+        //             result.push(arr[i]);
+        //         }
+        //     }
+
+        //     for (let i = 0; i < result.length; i++) {
+        //         for (let j = i + 1; j < result.length; j++) {
+        //             if (result[i] < result[j]) {
+        //                 let temp = result[i]
+        //                 result[i] = result[j]
+        //                 result[j] = temp
+
+        //             }
+        //         }
+        //     }
+        //     return result;
+        // }
+
+        // const numbers = [1, 6, 3, 1, 5, 9, 7, 2, 1, 9, 3, 7, 8, 9, 10];
+        // console.log(removeDuplicates(numbers));
+
+
+
+        // intersection  the 2 arrays
+
+        //         var arr1 = [6, 9, 4]
+        //         var arr2 = [7, 7, 8, 6, 6, 9, 4, 4, 9]
+        //         var arr3 = []
+        //         for (let i = 0; i < arr1.length; i++) {
+        //             for (let j = 0; j < arr2.length; j++) {
+        //                 if (arr1[i] == arr2[j]) {
+        //                     if (arr3.length == 0) {
+        //                         arr3.push(arr2[j])
+        //                     }
+        //                     else {
+        //                         if (arr3[i] != arr2[j]) {
+        //                             arr3.push(arr2[j])
+        //                         }
+        //                     }
+        //                 }
         //             }
         //         }
 
-        //         console.log(count);
+        //         console.log(arr3);
+        // var arr = [1, 3, 10, 6]
+        // function reverstring() {
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = i + 1; j < arr.length; j++) {
+        //             if (arr[i] > arr[j]) {
+        //                 let temp = arr[i]
+        //                 arr[i] = arr[j]
+        //                 arr[j] = temp
+        //                 console.log(arr);
+        //             }
+        //         }
+
         //     }
-
-        //     return count
         // }
+        // reverstring()
 
-        // console.log(occurrenceofNumber());
+        var str = "arjithmeshra";
+        // var array = ["a","e","i","o","u"]
+        var sortedstr = "";
+
+        var myfunction = () => {
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] != "a" || "e" || "i" || "o" || "u") {
+                    sortedstr += str[i];
+                }
+            }
+            return sortedstr;
+        };
+        console.log(myfunction());
+
+
     </script>
 </body>
 
