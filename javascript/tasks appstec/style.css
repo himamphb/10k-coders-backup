@@ -1,0 +1,57 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  a{
+    text-decoration: none;
+    
+  }
+  li{
+    list-style:none;
+  }
+  .card{
+    box-shadow: 0 0 5px black;
+}
+.card h5{
+    font-weight: bold;
+}
+.card p{
+    font-weight: 500;
+}
+.checked{
+    color: #f5b500;
+}
+#btn2{
+   text-align: center;
+   margin-top: 10px;
+}
+#btn2 button{
+   width: 100px;
+   height: 30px;
+   background-color: #f5b500;
+   border: none;
+   font-weight: bold;
+   letter-spacing: 3px;
+   transition: 0.3s ease;
+   cursor: pointer;
+}
+
+
+
+
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+

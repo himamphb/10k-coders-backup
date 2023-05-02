@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">FirstName:</label>
+      <input type="text" name="fname" id="fname" /><br /><br />
+      <label for="lname">LastName:</label>
+      <input type="text" name="lname" id="lname" /><br /><br />
+      <label for="gender">Gender:</label>
+      <input type="radio" name="gender" value="male" />Male
+      <input type="radio" name="gender" value="female" />Female <br /><br />
+      <label for="Subjects">Subjects:</label>
+      <input type="checkbox" name="subject" value="ReactJS" />ReactJS
+      <input type="checkbox" name="subject" value="NodeJS" />NodeJS
+      <input type="checkbox" name="subject" value="ExpressJS" />ExpressJS
+      <br /><br />
+      <button type="button" onclick="getData()">Get Data</button>
+    </form>
+    <script>
+      function getData() {
+        var user = {
+          fname: "",
+          lname: "",
+          gender: "",
+          subjects: [],
+        };
+        for(a in user){
+          if(a !== "gender" && a !== "subjects"){
+            user[a] = document.getElementById(a).value
+          }
+          else if(a == "gender"){
+            var alldetails = document.getElementsByName("gender")
+            alldetails.forEach((ele)=>{
+              if(ele.checked){
+              user.gender = ele.value
+            }
+            })
+            
+          }
+          else{
+            var allsubjects = document.getElementsByName("subject")
+            
+            allsubjects.forEach((ele)=>{
+              if(ele.checked){
+              user.subjects.push(ele.value) 
+            }
+            })
+            
+          }
+        }
+        console.log("User",user)
+      }
+    </script>
+  </body>
+</html>
